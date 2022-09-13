@@ -113,10 +113,9 @@ class Sender:
 running = True
 while running:
     run = input("Do you want listen to incoming connections (Type 'l') or do you want to connect (Type 'c'): ").lower()
-    # ip = input("Enter ip: ")
-    # port = input("Enter port: ")
-    ip = '192.168.8.121'
-    port = 4444
+    ip = input("Enter ip: ")
+    port = input("Enter port: ")
+   
     if run == 'l':
         connects = listen(ip, port)
         running = False
@@ -130,5 +129,5 @@ receiver = myThread(1, "receive", 0.1, connects, ip)
 sender = myThread(2, "send", 0.2, connects, ip)
 receiver.start()
 sender.start()
-# receiver.join()
-# sender.join()
+
+
