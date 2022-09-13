@@ -114,7 +114,7 @@ running = True
 while running:
     run = input("Do you want listen to incoming connections (Type 'l') or do you want to connect (Type 'c'): ").lower()
     ip = input("Enter ip: ")
-    port = input("Enter port: ")
+    port = int(input("Enter port: "))
    
     if run == 'l':
         connects = listen(ip, port)
